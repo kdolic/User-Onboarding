@@ -105,7 +105,7 @@ useEffect(() => {
   return (
     <div className="App">
      <header>
-       <h1>Lambda Sign Up App</h1>
+       <h1>Form Application App</h1>
      </header>
 
      <Form

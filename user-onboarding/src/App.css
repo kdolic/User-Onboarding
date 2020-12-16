@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+ 
 }
 body {
   display: flex;
@@ -11,13 +12,14 @@ body {
   padding: 32px;
 }
 .container {
-  border: 1px solid rgb(210, 210, 210);
-  border-radius: 4px;
-  box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+  margin: 30px auto;
+  border: 1px solid #d2d2d2;
+  box-shadow: 0px 1px 10px -2px #807f7f;
+  border-radius: 20px;
+  width: 50%;
   padding: 32px;
-  background-color: white;
+  background-color: whitesmoke;
   margin-bottom: 50px;
-  width: 100%;
 }
 h1, h2, h3{
   color: crimson;
@@ -36,28 +38,25 @@ h4 {
 }
 label {
   display: flex;
-  text-align: center;
-  justify-content: center baseline;
+  justify-content: left baseline;
   font-weight: bold;
 }
 input, select, button {
   height: 1.5rem;
-  width: 150px;
+  width: 95%;
   margin: 0px 8px 8px 0;
+  display: flex;
+  justify-content: right baseline;
 }
 button {
   color: white;
   background-color: crimson;
   border-radius: 5px;
   border: 1px solid black;
-  width: 10%;
-
-  &:disabled {
-    cursor: not-allowed;
-  }
+  width: 20%;
 }
 .submit {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
@@ -71,8 +70,14 @@ button {
   text-align: center;
 }
 
-.checkboxes {
-  text-align: center;
- 
-  
+.errors {
+  margin-bottom: 25px;
+  font-size: 0.8em;
+  color: red;
+
 }
+
+.checkboxes input {
+  width: 3%;
+}
+
