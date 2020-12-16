@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Roboto&display=swap');
+
+
 * {
   box-sizing: border-box;
  
@@ -8,7 +11,7 @@ body {
   align-items: center;
   background-color: rgb(244, 244, 244);
   color: rgb(65, 75, 60);
-  font-family: 'Bitter', serif;
+  font-family: 'Hind Siliguri', sans-serif;
   padding: 32px;
 }
 .container {
@@ -74,7 +77,6 @@ button {
   margin-bottom: 25px;
   font-size: 0.8em;
   color: red;
-
 }
 
 .checkboxes input {
