@@ -58,7 +58,7 @@ export default function TeamMemberForm(props) {
                 <label><input name='terms' type='checkbox' checked={values.terms} onChange={onChange} />I agree to the new Terms of Service</label>
             </div>
             <div className='submit'>
-                <button disabled={disabled}>Submit</button>
+                <button id='submitButton' disabled={disabled}>Submit</button>
             </div>
         </form>
     );
