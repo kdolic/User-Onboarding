@@ -1,3 +1,5 @@
+/*global cy*/
+
 describe('Lambda Form Application App', () => {
 
     beforeEach(() => {
@@ -13,6 +15,7 @@ describe('Lambda Form Application App', () => {
     const rolesDropdown = () => cy.get('form select[name="role"]')
     const termsBox = () => cy.get('form input[type="checkbox"]')
     const submitButton = () => cy.get('button[id="submitButton"]')
+    const errors = () => cy.get(".errors")
 
     it('Elements exist', () => {
         firstNameInput().should('exist')
@@ -55,9 +58,11 @@ describe('Lambda Form Application App', () => {
     })
 
     it('Checks for form validation if an input is empty', () => {
+        errors()
+        .should(
+        firstNameInput().type('Kenan')
+        firstNameInput().should('have.length', 2)
         
-        submitButton().should('not.be.disabled')
-       
     })
 
 
