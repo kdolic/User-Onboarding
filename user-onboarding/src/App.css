@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Roboto&display=swap');
+
+
+* {
+  box-sizing: border-box;
+ 
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(244, 244, 244);
+  color: rgb(65, 75, 60);
+  font-family: 'Hind Siliguri', sans-serif;
+  padding: 32px;
+}
+.container {
+  margin: 30px auto;
+  border: 1px solid #d2d2d2;
+  box-shadow: 0px 1px 10px -2px #807f7f;
+  border-radius: 20px;
+  width: 50%;
+  padding: 32px;
+  background-color: whitesmoke;
+  margin-bottom: 50px;
+}
+h1, h2, h3{
+  color: crimson;
+  text-align: center;
+}
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+h4 {
+  margin-bottom: 3.2rem;
+}
+label {
+  display: flex;
+  justify-content: left baseline;
+  font-weight: bold;
+}
+input, select, button {
+  height: 1.5rem;
+  width: 95%;
+  margin: 0px 8px 8px 0;
+  display: flex;
+  justify-content: right baseline;
+}
+button {
+  color: white;
+  background-color: crimson;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 20%;
+}
+.submit {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.friend {
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.errors {
+  margin-bottom: 25px;
+  font-size: 0.8em;
+  color: red;
+}
+
+.checkboxes input {
+  width: 3%;
+}
+
