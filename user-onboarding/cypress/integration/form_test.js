@@ -4,13 +4,15 @@ describe('Lambda Form Application App', () => {
         cy.visit('http://localhost:3000')
     })
 
+
+    // HELPERS to AVOID REPITITION
     const firstNameInput = () => cy.get('form input[name="fname"]')
     const lastNameInput = () => cy.get('form input[name="lname"]')
     const emailInput = () => cy.get('form input[name="email"]')
     const passwordInput = () => cy.get('form input[name="password"]')
     const rolesDropdown = () => cy.get('form select[name="role"]')
     const termsBox = () => cy.get('form input[type="checkbox"]')
-    const submitButton = () => cy.get('form button[id="submitButton"]')
+    const submitButton = () => cy.get('button[id="submitButton"]')
 
     it('Elements exist', () => {
         firstNameInput().should('exist')
@@ -24,8 +26,7 @@ describe('Lambda Form Application App', () => {
 
 
 
-describe('Name, Email, Password, Terms of Service Inputs', () => {
-
+    describe('Name, Email, Password, Terms of Service Inputs, & Validation', () => {
     it('can type inside the input fields', () => {
         firstNameInput()
             .should('have.value', '')
@@ -53,21 +54,28 @@ describe('Name, Email, Password, Terms of Service Inputs', () => {
         .should('be.checked')
     })
 
+    it('Checks for form validation if an input is empty', () => {
+        
+        submitButton().should('not.be.disabled')
+       
+    })
 
-})
 
-describe('Application Form Submit', () => {
-    it('Allows submission of form after everything is completed', () => {
+    })
+
+    describe('Application Form Submit', () => {
+    it('Allows submission of form after everything is completed & filled out', () => {
         firstNameInput().type('Kenan')
         lastNameInput().type('Dolic')
         emailInput().type('kdolic@gmail.com')
         passwordInput().type('password1234')
         rolesDropdown().select('Front-End Engineer')
-        // termsBox.check().should('be.checked')
+        termsBox().check()
         submitButton().should('not.be.disabled')
         submitButton().click()
-        cy.contains('Kenan Dolic Email: kdolic@gmail.com Role: Front-End Engineer').should('exist')
+        cy.contains('Kenan Dolic').should('exist');
+        cy.contains('kdolic@gmail.com').should('exist');
+        cy.contains('Front-End Engineer').should('exist');
+        })
     })
-})
-
 })
