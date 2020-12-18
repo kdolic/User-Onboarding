@@ -15,7 +15,6 @@ describe('Lambda Form Application App', () => {
     const rolesDropdown = () => cy.get('form select[name="role"]')
     const termsBox = () => cy.get('form input[type="checkbox"]')
     const submitButton = () => cy.get('button[id="submitButton"]')
-    const errors = () => cy.get(".errors")
 
     it('Elements exist', () => {
         firstNameInput().should('exist')
@@ -58,14 +57,13 @@ describe('Lambda Form Application App', () => {
     })
 
     it('Checks for form validation if an input is empty', () => {
-        errors()
-        .should(
         firstNameInput().type('Kenan')
-        firstNameInput().should('have.length', 2)
-        
+        firstNameInput().clear()
+        firstNameInput().should('have.length', 1)
+        emailInput().type('kdolic.gmail.com')
+        passwordInput().type('password12')
     })
-
-
+    
     })
 
     describe('Application Form Submit', () => {
